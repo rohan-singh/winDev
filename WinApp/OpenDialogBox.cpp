@@ -11,7 +11,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow
 		IFileOpenDialog *pFileOpen;
 
 		// Call CoCreateInstance to create the Common Item Dialog object and get a pointer to the object's IFileOpenDialog interface.
-		hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL, IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
+		//hr = CoCreateInstance(CLSID_FileOpenDialog, NULL, CLSCTX_ALL, IID_IFileOpenDialog, reinterpret_cast<void**>(&pFileOpen));
+		hr = CoCreateInstance(__uuidof(FileOpenDialog), NULL, CLSCTX_ALL,IID_PPV_ARGS(&pFileOpen)); //safer
 
 		if (SUCCEEDED(hr))
 		{
