@@ -176,7 +176,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 	// window is removed from the screen. This message is sent first to the window being destroyed and then to the child 
 	// windows (if any) as they are destroyed.
 	case WM_DESTROY:
-		PostQuitMessage(0); //post the quit msg in AMQ
+		PostQuitMessage(0); //post the quit msg in AMQ (Indicates to the system that a thread has made a request to terminate (quit). It is typically used in response to a WM_DESTROY message.)
 		break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);
