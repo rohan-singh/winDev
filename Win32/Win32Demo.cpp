@@ -118,7 +118,8 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 //  FUNCTION: WndProc(HWND, UINT, WPARAM, LPARAM)
 //
 //  PURPOSE:  Processes messages for the main window.(An application-defined function that processes messages sent to a window.)
-//
+//  WM_LBUTTONDOWN - On left button click
+//  WM_RBUTTONDOWN - On Right Button Click
 //  WM_COMMAND	- process the application menu
 //  WM_PAINT	- Paint the main window
 //  WM_DESTROY	- post a quit message and return
