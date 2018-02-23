@@ -4,6 +4,7 @@
 
 #include <windows.h>
 
+// forward declarations
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 /*
 * There are four parameters:
@@ -14,6 +15,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 * The meaning of this value depends on the message code. CALLBACK is the calling convention for the function.
 */
 
+// main function
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow)
 /*
 * The four parameters are :
@@ -70,6 +72,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow
 	return 0;
 }
 
+// message handler
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	// painting the window : fills the entire client area with a solid color
