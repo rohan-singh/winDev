@@ -137,10 +137,13 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 		MessageBox(0, L"Hello World: Left Click", L"Hello", MB_OK);
 		break;
 
-	//On Right Button Click
+	// On Right Button Click
 	case WM_RBUTTONDOWN:
 		MessageBox(0, L"Hello World: Right Click", L"Hello", MB_OK);
 		break;
+			
+	// Sent when the user selects a command item from a menu, when a control sends a notification message to its parent window, 
+	// or when an accelerator keystroke is translated
 	case WM_COMMAND:
 		wmId    = LOWORD(wParam);
 		wmEvent = HIWORD(wParam);
@@ -159,11 +162,18 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam) 
 			return DefWindowProc(hWnd, message, wParam, lParam);
 		}
 		break;
+			
+	// The WM_PAINT message is sent when the system or another application makes a request to paint a portion of an 
+	// application's window.
 	case WM_PAINT:
 		hdc = BeginPaint(hWnd, &ps);
 		// TODO: Add any drawing code here...
 		EndPaint(hWnd, &ps);
 		break;
+			
+	// Sent when a window is being destroyed. It is sent to the window procedure of the window being destroyed after the 
+	// window is removed from the screen. This message is sent first to the window being destroyed and then to the child 
+	// windows (if any) as they are destroyed.
 	case WM_DESTROY:
 		PostQuitMessage(0); //post the quit msg in AMQ
 		break;
