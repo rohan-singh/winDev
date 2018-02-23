@@ -1,6 +1,7 @@
 #include <windows.h>
 #include <shobjidl.h> 
 
+//main function
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE, PWSTR pCmdLine, int nCmdShow)
 {
 	//Call CoInitializeEx to initialize the COM library
